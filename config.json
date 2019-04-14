@@ -1,0 +1,30 @@
+{
+	"aws": {
+		"profile": "",
+		"region": "us-east-1"
+	},
+	"Instances": {
+		"imageId": "ami-08e58b93705fb503f",
+		"instanceType": "t2.micro"
+	},
+	"VPC": {
+		"vpcId": "vpc-0c2791239f597b",
+		"subnet": {
+			"subnet1_us-east-1a": "subnet-0764b5d273be80",
+			"subnet2_us-east-1b": "subnet-091f2464af4757"
+		}
+	},
+	"launch_configuration": {
+		"config_name": "app-launch-config",
+		"key_name": "",
+		"port_to_enable": [22, 80]
+	},
+	"load_balancer":{
+		"port_to_enable": [80],
+		"load_balancer_name": "app-alb",
+		"az": ["us-east-1a", "us-east-1b"]
+	},
+	"AutoScaling": {
+		"group_name": "app-asg"
+	}
+}
